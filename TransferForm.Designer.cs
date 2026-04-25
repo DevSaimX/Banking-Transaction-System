@@ -34,10 +34,10 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
             this.txtTransferAmount = new System.Windows.Forms.TextBox();
-            this.cmbSenderAccount = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbReceiverAccount = new System.Windows.Forms.ComboBox();
+            this.txtSenderAccountNo = new System.Windows.Forms.TextBox();
+            this.txtReceiverAccountNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -60,21 +60,23 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(616, 381);
+            this.btnBack.Location = new System.Drawing.Point(315, 381);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 39);
             this.btnBack.TabIndex = 23;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(309, 382);
+            this.btnClear.Location = new System.Drawing.Point(610, 381);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 39);
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnTransfer
             // 
@@ -84,6 +86,7 @@
             this.btnTransfer.TabIndex = 21;
             this.btnTransfer.Text = "Transfer";
             this.btnTransfer.UseVisualStyleBackColor = true;
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
             // txtTransferAmount
             // 
@@ -91,14 +94,6 @@
             this.txtTransferAmount.Name = "txtTransferAmount";
             this.txtTransferAmount.Size = new System.Drawing.Size(251, 35);
             this.txtTransferAmount.TabIndex = 20;
-            // 
-            // cmbSenderAccount
-            // 
-            this.cmbSenderAccount.FormattingEnabled = true;
-            this.cmbSenderAccount.Location = new System.Drawing.Point(416, 150);
-            this.cmbSenderAccount.Name = "cmbSenderAccount";
-            this.cmbSenderAccount.Size = new System.Drawing.Size(251, 38);
-            this.cmbSenderAccount.TabIndex = 19;
             // 
             // label1
             // 
@@ -120,28 +115,34 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Receiver Account";
             // 
-            // cmbReceiverAccount
+            // txtSenderAccountNo
             // 
-            this.cmbReceiverAccount.FormattingEnabled = true;
-            this.cmbReceiverAccount.Location = new System.Drawing.Point(416, 215);
-            this.cmbReceiverAccount.Name = "cmbReceiverAccount";
-            this.cmbReceiverAccount.Size = new System.Drawing.Size(251, 38);
-            this.cmbReceiverAccount.TabIndex = 26;
+            this.txtSenderAccountNo.Location = new System.Drawing.Point(416, 158);
+            this.txtSenderAccountNo.Name = "txtSenderAccountNo";
+            this.txtSenderAccountNo.Size = new System.Drawing.Size(251, 35);
+            this.txtSenderAccountNo.TabIndex = 28;
+            // 
+            // txtReceiverAccountNo
+            // 
+            this.txtReceiverAccountNo.Location = new System.Drawing.Point(416, 223);
+            this.txtReceiverAccountNo.Name = "txtReceiverAccountNo";
+            this.txtReceiverAccountNo.Size = new System.Drawing.Size(251, 35);
+            this.txtReceiverAccountNo.TabIndex = 29;
             // 
             // TransferForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.txtReceiverAccountNo);
+            this.Controls.Add(this.txtSenderAccountNo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbReceiverAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.txtTransferAmount);
-            this.Controls.Add(this.cmbSenderAccount);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
@@ -160,9 +161,9 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.TextBox txtTransferAmount;
-        private System.Windows.Forms.ComboBox cmbSenderAccount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbReceiverAccount;
+        private System.Windows.Forms.TextBox txtSenderAccountNo;
+        private System.Windows.Forms.TextBox txtReceiverAccountNo;
     }
 }
